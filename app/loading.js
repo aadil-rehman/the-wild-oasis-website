@@ -1,3 +1,12 @@
+// import Spinner from "./_components/Spinner";
+"use client";
+
 export default function Loading() {
-	return <p>LOADING DATA...</p>;
+	return (
+		<>
+			{/* <Spinner /> */}
+			<p>Loading...</p>
+			{console.log("Hello")}
+		</>
+	);
 }
