@@ -5,7 +5,7 @@ export default function Loading() {
 		<>
 			{/* <Spinner /> */}
 			<p>Loading...</p>
-			{console.log("Hello")}
+			{/* {console.log("Hello")} */}
 		</>
 	);
 }
