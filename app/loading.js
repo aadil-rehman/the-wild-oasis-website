@@ -1,5 +1,4 @@
 // import Spinner from "./_components/Spinner";
-"use client";
 
 export default function Loading() {
 	return (
