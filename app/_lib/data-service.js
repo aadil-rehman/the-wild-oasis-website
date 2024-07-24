@@ -47,6 +47,8 @@ export const getCabins = async function () {
 		throw new Error("Cabins could not be loaded");
 	}
 
+	await new Promise((res) => setTimeout(res, 500));
+
 	return data;
 };
 
