@@ -109,6 +109,8 @@ export async function getBookedDatesByCabinId(cabinId) {
 		.eq("cabinId", cabinId)
 		.or(`startDate.gte.${today},status.eq.checked-in`);
 
+	// await new Promise((res) => setTimeout(res, 1000));
+
 	if (error) {
 		console.error(error);
 		throw new Error("Bookings could not get loaded");
@@ -130,6 +132,8 @@ export async function getBookedDatesByCabinId(cabinId) {
 export async function getSettings() {
 	const { data, error } = await supabase.from("settings").select("*").single();
 
+	// await new Promise((res) => setTimeout(res, 5000));
+
 	if (error) {
 		console.error(error);
 		throw new Error("Settings could not be loaded");
@@ -141,7 +145,7 @@ export async function getSettings() {
 export async function getCountries() {
 	try {
 		const res = await fetch(
-			"https://restcountries.com/v2/all?fields=name,flag"
+			"https://countriesnow.space/api/v0.1/countries/flag/images"
 		);
 		const countries = await res.json();
 		return countries;
